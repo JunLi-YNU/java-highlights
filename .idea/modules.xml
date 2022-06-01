@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/java-highlights.iml" filepath="$PROJECT_DIR$/java-highlights.iml" />
+      <module fileurl="file://$PROJECT_DIR$/new-features/new-features.iml" filepath="$PROJECT_DIR$/new-features/new-features.iml" />
     </modules>
   </component>
 </project>
