@@ -1,4 +1,4 @@
-package optional.beans;
+package java8.optional.beans;
 
 import java.util.Optional;
 

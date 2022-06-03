@@ -1,6 +1,6 @@
-package optional.beans;
+package java8.optional.beans;
 
-import optional.Address;
+import java8.optional.Address;
 
 public class User {
     private String name;

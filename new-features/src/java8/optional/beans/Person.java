@@ -1,4 +1,4 @@
-package optional.beans;
+package java8.optional.beans;
 
 public class Person {
     private String name;

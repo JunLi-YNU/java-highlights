@@ -1,6 +1,6 @@
-package optional;
+package java8.optional;
 
-import optional.beans.User;
+import java8.optional.beans.User;
 
 import java.util.Optional;
 
@@ -93,7 +93,7 @@ public class OptionalTest {
     }
 
     public static String getUserName(User user) throws Exception {
-        return Optional.ofNullable(user).map(user1 -> user1.getName()).orElseThrow(()->new Exception("不存在！"));
+        return Optional.ofNullable(user).map(u -> u.getName()).orElseThrow(()->new Exception("不存在！"));
         /*
         public static Optional<String> getName(User user){
             return Optional.ofNullable(name);
