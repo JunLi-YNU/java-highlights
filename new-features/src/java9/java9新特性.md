@@ -30,10 +30,10 @@ module module.two {
 }
 ```
 ##### Interface的跨包实现
-> Interface可以跨包实现的前提是
-> uses MyInterface;//接口的暴露，用于列入当前框架的实现需要的具体引入框架方去具体实现
-> provides com.reflection.MyInterface
-with com.reflect.MyInterfaceImpl;//指名引入模块的接口的具体实现类
+> Interface可以跨包实现的前提是<br/>
+> uses MyInterface;//接口的暴露，用于列入当前框架的实现需要的具体引入框架方去具体实现<br/>
+> provides com.reflection.MyInterface<br/>
+with com.reflect.MyInterfaceImpl;//指名引入模块的接口的具体实现类<br/>
 ```java
 package com.reflection;
 
@@ -53,10 +53,10 @@ public class MyInterfaceImpl implements MyInterface {
 ```
 
 ##### 反射机制的限制
-> 反射API的Java9封装和安全性得到了改进如果没有明确的授权给其他
-> 模块，那么其他模块是不允许使用反射进行修改的。
-> opens com.reflection;//开发指定的包，这样才可以实现反射
->  requires module.one;//引入整个模块
+> 反射API的Java9封装和安全性得到了改进如果没有明确的授权给其他<br/>
+> 模块，那么其他模块是不允许使用反射进行修改的。<br/>
+> opens com.reflection;//开发指定的包，这样才可以实现反射<br/>
+>  requires module.one;//引入整个模块<br/>
 
 ***在新的模块中可以这样实现的前提的是 opens com.reflection;开放了User类的权限***
 ```java
@@ -69,139 +69,139 @@ public class MyInterfaceImpl implements MyInterface {
 ```
 ## Java9 JShell
 ### java --list-modules 列出当前Java所有模块
-> java.base@11.0.12
-java.compiler@11.0.12
-java.datatransfer@11.0.12
-java.desktop@11.0.12
-java.instrument@11.0.12
-java.logging@11.0.12
-java.management@11.0.12
-java.management.rmi@11.0.12
-java.naming@11.0.12
-java.net.http@11.0.12
-java.prefs@11.0.12
-java.rmi@11.0.12
-java.scripting@11.0.12
-java.se@11.0.12
-java.security.jgss@11.0.12
-java.security.sasl@11.0.12
-java.smartcardio@11.0.12
-java.sql@11.0.12
-java.sql.rowset@11.0.12
-java.transaction.xa@11.0.12
-java.xml@11.0.12
-java.xml.crypto@11.0.12
-jdk.accessibility@11.0.12
-jdk.aot@11.0.12
-jdk.attach@11.0.12
-jdk.charsets@11.0.12
-jdk.compiler@11.0.12
-jdk.crypto.cryptoki@11.0.12
-jdk.crypto.ec@11.0.12
-jdk.dynalink@11.0.12
-jdk.editpad@11.0.12
-jdk.hotspot.agent@11.0.12
-jdk.httpserver@11.0.12
-jdk.internal.ed@11.0.12
-jdk.internal.jvmstat@11.0.12
-jdk.internal.le@11.0.12
-jdk.internal.opt@11.0.12
-jdk.internal.vm.ci@11.0.12
-jdk.internal.vm.compiler@11.0.12
-jdk.internal.vm.compiler.management@11.0.12
-jdk.jartool@11.0.12
-jdk.javadoc@11.0.12
-jdk.jcmd@11.0.12
-jdk.jconsole@11.0.12
-jdk.jdeps@11.0.12
-jdk.jdi@11.0.12
-jdk.jdwp.agent@11.0.12
-jdk.jfr@11.0.12
-jdk.jlink@11.0.12
-jdk.jshell@11.0.12
-jdk.jsobject@11.0.12
-jdk.jstatd@11.0.12
-jdk.localedata@11.0.12
-jdk.management@11.0.12
-jdk.management.agent@11.0.12
-jdk.management.jfr@11.0.12
-jdk.naming.dns@11.0.12
-jdk.naming.ldap@11.0.12
-jdk.naming.rmi@11.0.12
-jdk.net@11.0.12
-jdk.pack@11.0.12
-jdk.rmic@11.0.12
-jdk.scripting.nashorn@11.0.12
-jdk.scripting.nashorn.shell@11.0.12
-jdk.sctp@11.0.12
-jdk.security.auth@11.0.12
-jdk.security.jgss@11.0.12
-jdk.unsupported@11.0.12
-jdk.unsupported.desktop@11.0.12
-jdk.xml.dom@11.0.12
-jdk.zipfs@11.0.12
+> java.base@11.0.12<br/>
+java.compiler@11.0.12<br/>
+java.datatransfer@11.0.12<br/>
+java.desktop@11.0.12<br/>
+java.instrument@11.0.12<br/>
+java.logging@11.0.12<br/>
+java.management@11.0.12<br/>
+java.management.rmi@11.0.12<br/>
+java.naming@11.0.12<br/>
+java.net.http@11.0.12<br/>
+java.prefs@11.0.12<br/>
+java.rmi@11.0.12<br/>
+java.scripting@11.0.12<br/>
+java.se@11.0.12<br/>
+java.security.jgss@11.0.12<br/>
+java.security.sasl@11.0.12<br/>
+java.smartcardio@11.0.12<br/>
+java.sql@11.0.12<br/>
+java.sql.rowset@11.0.12<br/>
+java.transaction.xa@11.0.12<br/>
+java.xml@11.0.12<br/>
+java.xml.crypto@11.0.12<br/>
+jdk.accessibility@11.0.12<br/>
+jdk.aot@11.0.12<br/>
+jdk.attach@11.0.12<br/>
+jdk.charsets@11.0.12<br/>
+jdk.compiler@11.0.12<br/>
+jdk.crypto.cryptoki@11.0.12<br/>
+jdk.crypto.ec@11.0.12<br/>
+jdk.dynalink@11.0.12<br/>
+jdk.editpad@11.0.12<br/>
+jdk.hotspot.agent@11.0.12<br/>
+jdk.httpserver@11.0.12<br/>
+jdk.internal.ed@11.0.12<br/>
+jdk.internal.jvmstat@11.0.12<br/>
+jdk.internal.le@11.0.12<br/>
+jdk.internal.opt@11.0.12<br/>
+jdk.internal.vm.ci@11.0.12<br/>
+jdk.internal.vm.compiler@11.0.12<br/>
+jdk.internal.vm.compiler.management@11.0.12<br/>
+jdk.jartool@11.0.12<br/>
+jdk.javadoc@11.0.12<br/>
+jdk.jcmd@11.0.12<br/>
+jdk.jconsole@11.0.12<br/>
+jdk.jdeps@11.0.12<br/>
+jdk.jdi@11.0.12<br/>
+jdk.jdwp.agent@11.0.12<br/>
+jdk.jfr@11.0.12<br/>
+jdk.jlink@11.0.12<br/>
+jdk.jshell@11.0.12<br/>
+jdk.jsobject@11.0.12<br/>
+jdk.jstatd@11.0.12<br/>
+jdk.localedata@11.0.12<br/>
+jdk.management@11.0.12<br/>
+jdk.management.agent@11.0.12<br/>
+jdk.management.jfr@11.0.12<br/>
+jdk.naming.dns@11.0.12<br/>
+jdk.naming.ldap@11.0.12<br/>
+jdk.naming.rmi@11.0.12<br/>
+jdk.net@11.0.12<br/>
+jdk.pack@11.0.12<br/>
+jdk.rmic@11.0.12<br/>
+jdk.scripting.nashorn@11.0.12<br/>
+jdk.scripting.nashorn.shell@11.0.12<br/>
+jdk.sctp@11.0.12<br/>
+jdk.security.auth@11.0.12<br/>
+jdk.security.jgss@11.0.12<br/>
+jdk.unsupported@11.0.12<br/>
+jdk.unsupported.desktop@11.0.12<br/>
+jdk.xml.dom@11.0.12<br/>
+jdk.zipfs@11.0.12<br/>
 
 ### JShell 命令
-> |  键入 Java 语言表达式, 语句或声明。
-|  或者键入以下命令之一:
-|  /list [<名称或 id>|-all|-start]
-|       列出您键入的源
-|  /edit <名称或 id>
+> |  键入 Java 语言表达式, 语句或声明。<br/>
+|  或者键入以下命令之一:<br/>
+|  /list [<名称或 id>|-all|-start]<br/>
+|       列出您键入的源<br/>
+|  /edit <名称或 id><br/>
 |       编辑源条目
-|  /drop <名称或 id>
+|  /drop <名称或 id><br/>
 |       删除源条目
-|  /save [-all|-history|-start] <文件>
-|       将片段源保存到文件
-|  /open <file>
-|       打开文件作为源输入
-|  /vars [<名称或 id>|-all|-start]
-|       列出已声明变量及其值
-|  /methods [<名称或 id>|-all|-start]
-|       列出已声明方法及其签名
-|  /types [<名称或 id>|-all|-start]
-|       列出类型声明
-|  /imports
-|       列出导入的项
-|  /exit [<integer-expression-snippet>]
-|       退出 jshell 工具
-|  /env [-class-path <路径>] [-module-path <路径>] [-add-modules <模块>] ...
-|       查看或更改评估上下文
-|  /reset [-class-path <路径>] [-module-path <路径>] [-add-modules <模块>]...
-|       重置 jshell 工具
-|  /reload [-restore] [-quiet] [-class-path <路径>] [-module-path <路径>]...
-|       重置和重放相关历史记录 -- 当前历史记录或上一个历史记录 (-restore)
-|  /history [-all]
-|       您键入的内容的历史记录
-|  /help [<command>|<subject>]
-|       获取有关使用 jshell 工具的信息
-|  /set editor|start|feedback|mode|prompt|truncation|format ...
-|       设置配置信息
-|  /? [<command>|<subject>]
-|       获取有关使用 jshell 工具的信息
-|  /!
-|       重新运行上一个片段 -- 请参阅 /help rerun
-|  /<id>
-|       按 ID 或 ID 范围重新运行片段 -- 参见 /help rerun
-|  /-<n>
-|       重新运行以前的第 n 个片段 -- 请参阅 /help rerun
+|  /save [-all|-history|-start] <文件><br/>
+|       将片段源保存到文件<br/>
+|  /open <file><br/>
+|       打开文件作为源输入<br/>
+|  /vars [<名称或 id>|-all|-start]<br/>
+|       列出已声明变量及其值<br/>
+|  /methods [<名称或 id>|-all|-start]<br/>
+|       列出已声明方法及其签名<br/>
+|  /types [<名称或 id>|-all|-start]<br/>
+|       列出类型声明<br/>
+|  /imports<br/>
+|       列出导入的项<br/>
+|  /exit [<integer-expression-snippet>]<br/>
+|       退出 jshell 工具<br/>
+|  /env [-class-path <路径>] [-module-path <路径>] [-add-modules <模块>] ...<br/>
+|       查看或更改评估上下文<br/>
+|  /reset [-class-path <路径>] [-module-path <路径>] [-add-modules <模块>]...<br/>
+|       重置 jshell 工具<br/>
+|  /reload [-restore] [-quiet] [-class-path <路径>] [-module-path <路径>]...<br/>
+|       重置和重放相关历史记录 -- 当前历史记录或上一个历史记录 (-restore)<br/>
+|  /history [-all]<br/>
+|       您键入的内容的历史记录<br/>
+|  /help [<command>|<subject>]<br/>
+|       获取有关使用 jshell 工具的信息<br/>
+|  /set editor|start|feedback|mode|prompt|truncation|format ...<br/>
+|       设置配置信息<br/>
+|  /? [<command>|<subject>]<br/>
+|       获取有关使用 jshell 工具的信息<br/>
+|  /!<br/>
+|       重新运行上一个片段 -- 请参阅 /help rerun<br/>
+|  /<id><br/>
+|       按 ID 或 ID 范围重新运行片段 -- 参见 /help rerun<br/>
+|  /-<n><br/>
+|       重新运行以前的第 n 个片段 -- 请参阅 /help rerun<br/>
 |  
-|  有关详细信息, 请键入 '/help', 后跟
-|  命令或主题的名称。
-|  例如 '/help /list' 或 '/help intro'。主题:
-|  
-|  intro
-|       jshell 工具的简介
-|  keys
-|       类似 readline 的输入编辑的说明
-|  id
-|       片段 ID 以及如何使用它们的说明
-|  shortcuts
-|       片段和命令输入提示, 信息访问以及
-|       自动代码生成的按键说明
-|  context
-|       /env /reload 和 /reset 的评估上下文选项的说明
-|  rerun
-|       重新评估以前输入片段的方法的说明
+|  有关详细信息, 请键入 '/help', 后跟<br/>
+|  命令或主题的名称。<br/>
+|  例如 '/help /list' 或 '/help intro'。主题:<br/>
+|  <br/>
+|  intro<br/>
+|       jshell 工具的简介<br/>
+|  keys<br/>
+|       类似 readline 的输入编辑的说明<br/>
+|  id<br/>
+|       片段 ID 以及如何使用它们的说明<br/>
+|  shortcuts<br/>
+|       片段和命令输入提示, 信息访问以及<br/>
+|       自动代码生成的按键说明<br/>
+|  context<br/>
+|       /env /reload 和 /reset 的评估上下文选项的说明<br/>
+|  rerun<br/>
+|       重新评估以前输入片段的方法的说明<br/>
 
 ## Java9 Interface接口中也支持private
 ```java
@@ -234,10 +234,10 @@ public interface MyInterface {
         Set.of();
 ```
 ## Java9 改进Stream API
-> 1.新增ofNullable()方法
-> 2.数据流生产限制limit方法可以直接写到iterate()方法中
-> 3.新增数据截断方法takeWhile()
-> 4.新增数据丢弃方法dropWhile()
+> 1.新增ofNullable()方法<br/>
+> 2.数据流生产限制limit方法可以直接写到iterate()方法中<br/>
+> 3.新增数据截断方法takeWhile()<br/>
+> 4.新增数据丢弃方法dropWhile()<br/>
 ```java
         Stream
         .of(1, 2, 1, 3, 2, 4, 5)
@@ -261,10 +261,10 @@ public interface MyInterface {
         .dropWhile(i -> i < 15) //丢弃产生的数据流
         .forEach(System.out::println);
 ```
-## java9 try-with-resource语句 
-> 1.java8 可以将try的对象定义语句直接塞入try(try(InputStream inputStreamJava8 = Files.newInputStream(Paths.get("demo.txt"));))
-> 2.java9 可以将变量塞入到try()中
-> 3.都省略了对异常的捕获
+## Java9 try-with-resource语句 
+> 1.java8 可以将try的对象定义语句直接塞入try(try(InputStream inputStreamJava8 = Files.newInputStream(Paths.get("demo.txt"));))<br/>
+> 2.java9 可以将变量塞入到try()中<br/>
+> 3.都省略了对异常的捕获<br/>
 ```java
         //java8 之前的写法
         InputStream inputStream = Files.newInputStream(Paths.get("demo.txt"));
@@ -299,8 +299,8 @@ public interface MyInterface {
 ```
 
 ## java9 Optional 新增方法
-1. 新增ifPresentOrElse()方法，如果被包装元素是null，可进行Else操作。
-2. 新增or()方法被包装元素如果为null，则可重新指定元素。
+> 1. 新增ifPresentOrElse()方法，如果被包装元素是null，可进行Else操作。<br/>
+> 2. 新增or()方法被包装元素如果为null，则可重新指定元素。
 ```java
         String str = null;
         //新增ifPresentOrElse方法
