@@ -152,7 +152,7 @@ jdk.zipfs@11.0.12<br/>
 |       删除源条目
 |  /save [-all|-history|-start] <文件><br/>
 |       将片段源保存到文件<br/>
-|  /open <file><br/>
+|  /open <main.java.file><br/>
 |       打开文件作为源输入<br/>
 |  /vars [<名称或 id>|-all|-start]<br/>
 |       列出已声明变量及其值<br/>
